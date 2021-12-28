@@ -144,9 +144,8 @@ img {
   display: flex;
   width: 100%;
   position: absolute;
-  height: 79%;
+  height: 100%;
   object-fit: cover;
-  margin-top: 27px;
   z-index: 10;
 }
 
@@ -197,8 +196,10 @@ img {
 .property {
   .color__bar {
     height: 25px;
-    border-bottom: 2px solid $black;
+    margin-top: -1px;
+    border-bottom: 2px solid #080808;
     width: 100%;
+    z-index: 100;
   }
 
   .name {
@@ -207,6 +208,10 @@ img {
     font-size: 9px;
     text-transform: uppercase;
     z-index: 100;
+  }
+
+  .zero {
+    margin-top: 0px;
   }
 }
 
@@ -468,4 +473,12 @@ img {
 .three-line-name {
   position: relative;
   top: 5px;
+}
+
+
+@media screen and (max-width: 400px) {
+  .container__table {
+    zoom: 0.30;
+    height: initial;
+  }
 }
